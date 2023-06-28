@@ -11,6 +11,9 @@ const display = (work) => {
     btn.appendChild(_btntext)
     task.appendChild(text)
     task.appendChild(btn)
+    task.classList.add('task')
+    text.classList.add('display')
+    btn.setAttribute('id','delete')
     btn.addEventListener('click',() =>{
         task.remove()
     })
@@ -19,6 +22,6 @@ const display = (work) => {
 
 button.addEventListener('click' , () => {
     const list = document.querySelector('#list')
-    // list.appendChild(display(input.value))
-    list.innerHTML= display(input.value)
+    list.appendChild(display(input.value))
+    // list.innerHTML= display(input.value)
 })
